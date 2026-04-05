@@ -23,11 +23,8 @@ function WeatherDashboard() {
   } = useGeolocation();
 
   const weatherQuery = useWeatherQuery(coordinates);
-  console.log("weatherQuery", weatherQuery.data);
   const forecastQuery = useForecastQuery(coordinates);
-  console.log("forecastQuery", forecastQuery.data);
   const locationQuery = useReverseGeocodeQuery(coordinates);
-  console.log("locationQuery", locationQuery.data);
 
   const handleRefresh = () => {
     getLocation();
